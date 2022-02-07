@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* navigacioni bar */
+
+.navbar {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background: #3333cc;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .navbar .logo a {
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    -webkit-text-stroke: 1.5px black;
+}
+
+.navbar .logo a span {
+    color: #3333cc;
+    -webkit-text-stroke: 1.5px black;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: #fff;
+} */
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+    align-items: flex-start;
+}
+
+.navbar .menu li a {
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+    -webkit-text-stroke: 1.5px black;
+}
+
+.navbar .menu li a:hover {
+    color: #3333cc;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #fff;
+}
+
+/* meni dugme */
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+
+
+}
+
+/* home sekcija */
+.home {
+    display: flex;
+    background: url("slike/slika3.jpg") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home .max-width {
+    margin: 500px 0 auto 10px;
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+    -webkit-text-stroke: 1.5px black;
+}
+
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+    -webkit-text-stroke: 1.5px black;
+}
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+    -webkit-text-stroke: 1.5px black;
+}
+
+.home .home-content .text-3 span {
+    color: #3333cc;
+    font-weight: 500;
+
+}
+
+/* o nama sekcija stajl */
+section {
+    padding: 100px 0;
+}
+
+.onama {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+
+
+}
+
+.onama .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu'sans-serif;
+}
+
+.onama .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+.onama .title::after {
+    content: "Ko smo mi?";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    font-size: 15px;
+    color: #3333cc;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.onama .onama-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.onama .onama-content .left {
+    width: 45%;
+}
+
+.onama .onama-content .left img {
+    height: 700px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.onama .onama-content .right {
+    width: 55%;
+}
+
+.onama .onama-content .right p {
+    text-align: justify;
+
+}
+
+.onama .onama-content .right a {
+    text-align: justify;
+
+}
+
+
+
+/* galerija */
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0
+}
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+    border-radius: 6px;
+    height: 750px;
+}
+
+.galerija .title::after{
+    content: "Naši radovi.";
+}
+
+
+/* Slideshow */
+.galerija {
+    padding: 100px 0;
+    max-width: 1137px;
+    position: relative;
+    margin: auto;
+}
+
+/* dugmadi */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* pozicija next dugmeta */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* hover */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fading animacija */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+/* kontakt sekcija */
+
+.contact .title::after{
+    content: "Kako do nas?";
+ }
+ 
+ .contact .contact-content .column{
+     width: calc(50% - 30px);
+ 
+ 
+ }
+ .contact .contact-content .text{
+     font-size: 20px;
+     font-weight: 600;
+     margin-bottom: 10px;
+ }
+ .contact .contact-content .left p{
+     text-align: justify;
+ }
+ .contact .contact-content .left .icons{
+     margin: 10px 0;
+ }
+ .contact .contact-content .row{
+     display: flex;
+     height: 65px;
+     align-items: center;
+ }
+ .contact .contact-content .row .info{
+     margin-left: 30px;
+
+ }
+ .contact .contact-content .row i{
+     font-size: 25px;
+     color: #3333cc;
+ }
+ .contact .contact-content .info .head{
+     font-weight: 500;
+ }
+ .contact .contact-content .info .sub-title{
+     color: #333;
+ }
+ .contact .right form .fields{
+     display: flex;
+ }
+ .contact .right form .field,
+ .contact .right form .fields .field{
+     height: 45px;
+     width: 100%;
+     margin-bottom: 15px;
+ }
+ .contact .right form .textarea{
+     height: 80px;
+     width: 100%;
+ }
+ .contact .right form .name{
+     margin-right: 10px;
+ }
+ .contact .right form .email{
+    margin-left: 10px;
+}
+ .contact .right form .field input,
+ .contact .right form .textarea textarea{
+     height: 100%;
+     width: 100%;
+     border: 1px solid lightgrey;
+     border-radius: 6px;
+     outline: none;
+     padding: 0 15px;
+     font-size: 17px;
+     font-family: 'Poppins', sans-serif;
+ }
+ .contact .right form .textarea textarea{
+     padding-top: 10px;
+     resize: none;
+ }
+ .contact .right form .button{
+     height: 47px;
+     width: 170px;
+ }
+ .contact .right form .button button{
+     width: 100%;
+     height: 100%;
+     border: 2px solid #3333cc;
+     background: #3333cc;
+     color: #fff;
+     font-size: 20px;
+     font-weight: 500;
+     border-radius: 6px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     
+ }
+ .contact .right form .button button:hover{
+     color: #3333cc;
+     background: none;
+ }
+ /* footer */
+ footer{
+     background: #111;
+     padding: 20px 23px;
+     color: #fff;
+ }
+ footer span a{
+     color: #3333cc;
+     text-decoration: none;
+ }
+ footer span a:hover{
+     text-decoration: underline;
+ }
+/* responzivna media query start */
+
+@media (max-width: 910px) {
+
+    .max-width {
+        padding: 0 50px;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+
+    }
+
+    .navbar .menu li {
+        display: block;
+
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 20px;
+
+
+    }
+
+    .onama .onama-content .column {
+        width: 50%;
+    }
+}
